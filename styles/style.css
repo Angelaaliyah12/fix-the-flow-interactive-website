@@ -99,4 +99,41 @@ opacity: 0;
 top: 50%;
 transform: translate(-50%, -50%) rotate(-45deg);
 background-color: var(--color-secondary);
+}.filter {
+    display: flex;
+    gap: 80px;
+    margin-left: 15px;
+    box-sizing: border-box;
+}
+
+/* Alle woorden behalve de eerste */
+.filter span:not(:first-child) {
+    position: relative;   /* nodig voor pseudo-element */
+    padding: 5px 10px;    /* standaard padding */
+    cursor: pointer;
+    z-index: 1;           /* tekst boven pseudo-element */
+    transition: color 0.3s ease;
+}
+
+/* pseudo-element voor hover achtergrond */
+.filter span:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    top: -5px;       /* boven de tekst */
+    bottom: -5px;    /* onder de tekst */
+    left: -10px;     /* links van de tekst */
+    right: -10px;    /* rechts van de tekst */
+    background-color: transparent;
+    border-radius: 8px;
+    z-index: -1;     /* achter de tekst */
+    transition: background-color 0.3s ease;
+}
+
+/* hover-effect */
+.filter span:not(:first-child):hover::before {
+    background-color: var(--color-primary); /* kies je hover kleur */
+}
+
+.filter span:not(:first-child):hover {
+    color: var(--color-highlight);
 }
