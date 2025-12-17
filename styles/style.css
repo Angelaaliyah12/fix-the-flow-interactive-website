@@ -3,6 +3,7 @@ body{
 }
 
 
+
 .header-info{
   background-color: var(--color-secondary);
   align-items: center;
@@ -21,4 +22,56 @@ body{
 .header-info svg{
   width:  clamp(9rem, 8.9353rem + 11.4958vw, 20rem);;
   height: auto;
+}
+/* off screen menu  */
+.off-screen-menu{
+    position:fixed;
+    top: 0;
+    right: -450px; /*dan is het menu uit het beeldscherm het is -450 eruit*/
+    z-index: 999; /*brengt het naar voren zodat het niet in de header blijft*/
+    background-color: var(--color-primary);
+    height: 100vh;
+    width:100%;
+    max-width: 450px;
+    transition: .3 ease;
+}
+/* menu in beeld */
+.off-screen-menu-active{
+    right:0; /*dan komt de menu in beeld aan de rechterkant */
+}
+
+.ham-menu{
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position:relative;
+}
+.ham-menu span{
+    height: 5px;
+    width: 100%;
+    background-color: var(--color-text-secondary);
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    border-radius: 15px;
+    translate:  -50%, -50%;
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1){
+top: 25%;
+}
+.ham-menu span:nth-child(3){
+top: 75%;
+}
+
+.ham-menu.active span:nth-child(1){
+top:50%;
+translate: -50%, -50% rotate(45deg);
+}
+.ham-menu.active span:nth-child(2){
+opacity: 0;
+}
+.ham-menu.active span:nth-child(3){
+translate: -50%, -50% rotate(-45deg);
 }
