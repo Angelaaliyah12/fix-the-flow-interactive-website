@@ -45,7 +45,6 @@ body{
 .off-screen-menu.active{
     right:0; /*dan komt de menu in beeld aan de rechterkant */
 }
-
 .off-screen-menu ul{
     display:flex;
     flex-direction: column;
@@ -137,12 +136,17 @@ background-color: var(--color-secondary);
 .filter span:not(:first-child):hover {
     color: var(--color-highlight);
 }
+h1{
+  font-size: var(--font-size-h3);
+  margin:15px;
+}
 
 /* Kaartjes  */
 .card {
   width: 300px; 
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+ height:380px;
 }
 
 .card a {
@@ -160,9 +164,32 @@ background-color: var(--color-secondary);
   padding: 12px 16px;
   background-color: var(--color-highlight);
 }
+.card-content h2{
+   font-size: var( --font-size-h3)
+}
 /* hover effect op p binnen .card-content */
 .card-content:hover p {
   text-decoration: underline;
   text-decoration-style:solid;
 }
 
+.article-container{
+  display:flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  display:grid;
+  justify-content: center;
+  
+  @media (min-width: 42em) {
+     grid-template-columns: 18em 18em;
+  }
+
+  @media (min-width: 62em) {
+    grid-template-columns: 18em 18em 18em;
+  }  
+
+  @media (min-width: 82em) {
+    grid-template-columns: 18em 18em 18em 18em;
+  }
+}
