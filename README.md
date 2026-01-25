@@ -1,9 +1,5 @@
 
-
-De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/fix-the-flow-interactive-website/blob/main/docs/INSTRUCTIONS.md)
-
-# 
-Design for recognition
+### Design for recognition
 - Hieronder bevind de website Design for recognition. Op deze website kunnen ontwerpers naar ideeen zoeken voor toepassingen voor beeldherkenning in de publieke ruimte. 
 
 ## Beschrijving
@@ -24,7 +20,7 @@ Voor de Headings wordt gebruik gemaakt van de font Geomanist en voor de paragrap
 
 
 ## Homepage:
-<img width="451" height="536" alt="image" src="https://github.com/user-attachments/assets/e4f9e0ea-5a45-4bf3-87e6-ea81a87bd6d6" />
+<img width="449" height="603" alt="image" src="https://github.com/user-attachments/assets/fb087c5a-b194-4b26-a49f-7577f1960c2e" />
 
 ## Detailpage:
 <img width="1892" height="809" alt="image" src="https://github.com/user-attachments/assets/ffee9c2a-2f48-4b29-b4c0-e72b4d903e90" />
